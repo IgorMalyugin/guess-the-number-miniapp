@@ -1,6 +1,5 @@
 body {
     font-family: 'Arial', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
     background-color: #1a1a2e;
@@ -8,39 +7,65 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 120px; /* Место для фиксированной кнопки */
 }
 
 .container {
     max-width: 600px;
     padding: 20px;
+    width: 100%;
 }
 
 h1 {
     font-size: 3rem;
     color: #f8bb22;
     margin-bottom: 10px;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: #e94560;
+.title-container {
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.story {
+.title-line {
+    font-size: 2rem;
+    color: #e94560;
+    line-height: 1.2;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.story-container {
     background-color: #16213e;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: left;
+    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
-.story p {
+.story-content p {
     margin: 15px 0;
     line-height: 1.6;
+    text-align: left;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #1a1a2e 50%, transparent);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
 }
 
 #startGame {
@@ -52,7 +77,8 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 200px;
 }
 
 #startGame:hover {
@@ -63,6 +89,7 @@ h2 {
 .bot-link {
     color: #a5a5a5;
     font-style: italic;
+    margin: 0;
 }
 
 /* Стили для игрового блока */
@@ -88,4 +115,23 @@ h2 {
 
 .hidden {
     display: none !important;
+}
+
+/* Стиль скроллбара */
+.story-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.story-container::-webkit-scrollbar-track {
+    background: #16213e;
+    border-radius: 10px;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+    background: #e94560;
+    border-radius: 10px;
+}
+
+.story-container::-webkit-scrollbar-thumb:hover {
+    background: #ff6b81;
 }
