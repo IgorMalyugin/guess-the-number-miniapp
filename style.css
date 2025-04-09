@@ -7,33 +7,25 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-bottom: 120px; /* Место для фиксированной кнопки */
 }
 
 .container {
     max-width: 600px;
     padding: 20px;
     width: 100%;
-}
-
-h1 {
-    font-size: 3rem;
-    color: #f8bb22;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .title-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .title-line {
     font-size: 2rem;
-    color: #e94560;
+    color: #FFD700; /* Жёлтый цвет как на скриншоте */
     line-height: 1.2;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -45,7 +37,7 @@ h1 {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-height: 50vh;
+    flex-grow: 1;
     overflow-y: auto;
 }
 
@@ -55,17 +47,20 @@ h1 {
     text-align: left;
 }
 
-.fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, #1a1a2e 50%, transparent);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 100;
+.story-content strong {
+    color: #FFD700;
+}
+
+.start-button-container {
+    margin-top: auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.separator {
+    height: 1px;
+    background-color: #e94560;
+    margin: 20px 0;
 }
 
 #startGame {
