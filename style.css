@@ -1,14 +1,91 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 100px;
-  background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.game {
-  background-color: green;
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #f8bb22;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #e94560;
+    margin-bottom: 30px;
+}
+
+.story {
+    background-color: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+#startGame {
+    background-color: #e94560;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+#startGame:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+.bot-link {
+    color: #a5a5a5;
+    font-style: italic;
+}
+
+/* Стили для игрового блока */
+#gameBlock {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#gameBlock input, #gameBlock button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#gameBlock button {
+    background-color: #4ecca3;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
 }

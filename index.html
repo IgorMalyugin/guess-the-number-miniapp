@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Угадай число</title>
+    <title>Восстание Пузиляпуса</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="game">
-    <h1>Угадай число от 1 до 10</h1>
-    <input type="number" id="guessInput" min="1" max="10" />
-    <button onclick="checkGuess()">Проверить</button>
-    <p id="result"></p>
+<div class="container">
+    <h1>Рuzilapus</h1>
+    <h2>Восстание Пузиляпуса: Манечки Судьбы</h2>
+
+    <div class="story">
+        <p>великого Гастрономического Взрыва, когда гигантская баночка тушёнки столкнулась с чёрной дыркой.</p>
+        <p>Пузиляпус с детства мечтал стать королём манеток, но был изгнан из родного желудочного племени за то, что однажды случайно превратил их святую пиццу в омлет. С тех пор он скитается по вселенной, бесцельно появляясь в неожиданных местах... прямо на экране вашего телефона.</p>
+    </div>
+
+    <button id="startGame">НАЧАТЬ ИГРУ</button>
+    <p class="bot-link">@puzilapus_bot</p>
+
+    <!-- Игровой блок (изначально скрыт) -->
+    <div id="gameBlock" class="hidden">
+        <h3>Угадай число от 1 до 10</h3>
+        <input type="number" id="guessInput" min="1" max="10" />
+        <button onclick="checkGuess()">Проверить</button>
+        <p id="result"></p>
+    </div>
 </div>
 
 <script src="script.js"></script>
